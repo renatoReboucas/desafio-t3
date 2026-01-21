@@ -3,14 +3,23 @@ version: "3.8"
 services:
   db:
     image: postgres:13
-    ports:
-      - "5432:5432"
+    container_name: db
+    restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - news-network
 
 volumes:
   postgres_data:
+    name: postgres_data_new
+
+networks:
+  news-network:
+    driver: bridge

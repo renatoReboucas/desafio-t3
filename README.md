@@ -1,6 +1,6 @@
 # Projeto da tasks
 
-Este projeto é uma API construída com Next.js
+Este projeto é uma monólito construído com Next.js
 
 ## Pré-requisitos
 
@@ -13,8 +13,8 @@ Este projeto é uma API construída com Next.js
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/renatoReboucas/-desafio-T3.git
-   cd <NOME_DO_DIRETORIO>
+   git clone https://github.com/renatoReboucas/desafio-t3.git
+   cd desafio-t3
    ```
 
 2. **Configure o arquivo `.env`**:
@@ -24,28 +24,27 @@ Este projeto é uma API construída com Next.js
    Execute o seguinte comando para construir e iniciar o contêiner:
 
    ```bash
-   docker-compose up --build
+    docker-compose up --build -d
    ```
 
 4. **Acesse a API**:
-   A API estará disponível em `http://localhost:3333`.
+   A API estará disponível em `http://localhost:3000/api`.
 
 ## Scripts disponíveis
 
-- `npm start`: Inicia a aplicação.
-- `npm run build`: Compila o código TypeScript.
+- `npm run dev`: Inicia a aplicação.
 
 ## Estrutura do projeto
 
 - `src/`: Contém o código fonte da aplicação.
-- `dist/`: Contém o código compilado.
-- `Dockerfile`: Configuração do Docker para o projeto.
 - `docker-compose.yml`: Configuração do Docker Compose.
 
 ## Notas
 
 - Certifique-se de que o Docker está rodando antes de executar os comandos.
 - Verifique os logs do contêiner para diagnosticar problemas com:
+  
   ```bash
   docker-compose logs
   ```
+  
